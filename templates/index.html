@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVRbot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="chatbox">
+        <div id="chatlogs">
+            <div id="botStarterMessage" class="chat bot">Welcome to SVRbot. What's your life problem today?</div>
+        </div>
+       
+    </div>
+    <div class="chat-form">
+        <textarea id="userInput" placeholder="Ask me about Life..."></textarea>
+        <button id="sendButton" onclick="getBotResponse()">Send</button>
+    </div>
+
+<script>
+    function getBotResponse() {
+        var rawText = $("#userInput").val();
+        var userHtml = '<div class="chat user">' + rawText + '</div>';
+        $("#chatlogs").append(userHtml);
+        document.getElementById('userInput').value = '';
+        $.get("/get", { msg: rawText }).done(function(data) {
+            var botHtml = '<div class="chat bot">' + data + '</div>';
+            $("#chatlogs").append(botHtml);
+        });
+    }
+</script>
+</body>
+</html>

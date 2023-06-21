@@ -1,0 +1,102 @@
+body {
+    background-color: #ffffff;
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 500px;
+    min-height: 300px;
+    height: auto;
+    border-radius: 5px;
+    padding: 10px;
+    background: #F9F8FF;
+    box-shadow: 0px 0px 30px rgba(111, 94, 147, 0.42);
+    border-radius: 20px;
+}
+
+.chatlogs {
+    padding: 10px;
+    height: 400px;
+    overflow-x: hidden;
+    height: calc(100% - 60px); 
+    overflow-y: auto;
+}
+
+.chat {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user {
+    color: white;
+    line-height: 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 15px;
+    order: -1;
+    background-color: #6F5E93;
+    max-width: 75%;
+    width: 50%;
+    align-self: flex-end;
+    order: 1;
+    margin-left: auto;
+}
+
+.bot {
+    color: rgb(0, 0, 0);
+    line-height: 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 15px;
+    background: #D9D9D9;
+    max-width: 75%;
+    width: 50%;
+    align-self: flex-start;
+    order: 2;
+    margin-right: auto;
+}
+
+.chat-form {
+    position: fixed;
+    bottom: 0;
+    left: 0;  /* ensures the form is left-aligned */
+    right: 0; /* ensures the form is right-aligned */
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    background-color: rgba(255, 255, 255, 0.5);  /* semi-transparent white */
+    backdrop-filter: blur(10px);  /* adds blur effect */
+    z-index: 9999;  /* Adjust this value as necessary to ensure the form stays on top */
+}
+
+.chat-form textarea {
+    width: 80%;
+    height: 20px;
+    border-radius: 20px;
+    padding:7px;
+    background: #FFFFFF;
+    border: 4px solid #6F5E93;  
+    font-size: 14px;
+}
+
+.chat-form button {
+    width: 70px;
+    height: 43px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    background-color: #6F5E93;
+    transition: background-color 0.3s ease; 
+}
+
+.chat-form button:hover {
+    background-color: #ab9bc7; /* a lighter purple */
+    box-shadow: 0px 0px 10px rgba(111, 94, 147, 0.42);
+}
