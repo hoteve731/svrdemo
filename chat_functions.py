@@ -14,7 +14,7 @@ openai.api_key  = os.getenv('OPENAI_API_KEY')
 print (openai.api_key)
 
 COMPLETIONS_API_PARAMS = {
-    "temperature": 1,
+    "temperature": 0,
     "max_tokens": 300,
     "model": "text-davinci-003",
 }
