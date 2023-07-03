@@ -2,6 +2,23 @@ body {
     background-color: #ffffff;
 }
 
+.loading-spinner {
+    display: none;
+    margin: 10px auto;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid rgba(111, 94, 147, 0.42);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
 .chatbox {
     display: flex;
     flex-direction: column;
@@ -19,6 +36,8 @@ body {
 }
 
 .chatlogs {
+    display: flex;
+    flex-direction: column-reverse;
     padding: 10px;
     height: 400px;
     overflow-x: hidden;
@@ -99,4 +118,29 @@ body {
 .chat-form button:hover {
     background-color: #ab9bc7; /* a lighter purple */
     box-shadow: 0px 0px 10px rgba(111, 94, 147, 0.42);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);  /* semi-transparent white */
+    backdrop-filter: blur(10px);  /* adds blur effect */
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    
+}
+
+.navbar .nav-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#backButton {
+    text-decoration: none;
+    color: black;
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bookshelf.css') }}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <h1>ChatLib</h1>
+    <div class="bookshelf">
+        <div class="book" id="chatLink">
+            <img src="{{ url_for('static', filename='images/tao_te_ching.jpg') }}">
+            <div class="title">Tao Te Ching.</div>
+        </div>
+        <div class="book">
+            <img src="{{ url_for('static', filename='images/aristotle.jpg') }}">
+            <div class="title">아리스토텔레스</div>
+        </div>
+        <div class="book">
+            <img src="{{ url_for('static', filename='images/jesus.jpg') }}">
+            <div class="title">예수</div>
+        </div>
+        <!-- And so on... -->
+    </div>
+
+<script>
+    $('#chatLink').click(function() {
+        window.location.href = '/chat'; 
+    });
+</script>
+</body>
+</html>
