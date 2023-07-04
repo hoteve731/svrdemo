@@ -66,13 +66,17 @@ chat-form {
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
-    width: 500px;
+    width: 90%;
     min-height: 300px;
     height: auto;
     border-radius: 5px;
     background: #F9F8FF;
     box-shadow: 0px 0px 30px rgba(111, 94, 147, 0.42);
     border-radius: 20px;
+}
+
+.bookshelf{
+    justify-content: center;
 }
 
 .navbarimg{
@@ -89,7 +93,7 @@ chat-form {
 
 .overlay {
     position: absolute;
-    margin-left: 28px;
+    margin-left: -345px;
     margin-top: 52px;
     width: 100px;
     height: 155px;

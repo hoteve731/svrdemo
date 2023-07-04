@@ -1,3 +1,5 @@
+
+
 body {
     background-color: #ffffff;
 }
@@ -25,7 +27,7 @@ body {
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
-    width: 500px;
+    width: 90%;
     min-height: 300px;
     height: auto;
     border-radius: 5px;
@@ -54,8 +56,8 @@ body {
 
 .user {
     color: white;
-    line-height: 15px;
-    font-size: 14px;
+    line-height: 4vw;
+    font-size: 4vw;
     border-radius: 10px;
     padding: 15px;
     order: -1;
@@ -69,8 +71,9 @@ body {
 
 .bot {
     color: rgb(0, 0, 0);
-    line-height: 15px;
-    font-size: 14px;
+    line-height: 4vw;
+    font-size: 4vw;
+    
     border-radius: 10px;
     padding: 15px;
     background: #D9D9D9;
@@ -79,6 +82,13 @@ body {
     align-self: flex-start;
     order: 2;
     margin-right: auto;
+}
+
+@media screen and (min-width: 400px) { 
+    .user, .bot {
+        font-size: 14px; 
+        line-height: 15px;
+    }
 }
 
 .chat-form {
@@ -145,3 +155,4 @@ body {
     text-decoration: none;
     color: black;
 }
+
