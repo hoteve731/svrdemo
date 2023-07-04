@@ -84,7 +84,7 @@ body {
     margin-right: auto;
 }
 
-@media screen and (min-width: 400px) { 
+@media screen and (min-width: 600px) { 
     .user, .bot {
         font-size: 14px; 
         line-height: 15px;
