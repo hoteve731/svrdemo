@@ -137,12 +137,13 @@ body {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5);  /* semi-transparent white */
     backdrop-filter: blur(10px);  /* adds blur effect */
-    padding: 10px 20px;
+    padding: 20px 20px;
     height: 30px;
     border-bottom: 2px solid #ddd;
     position: sticky;
     top: 0;
     z-index: 9999;
+    color: #6F5E93;
     
 }
 
