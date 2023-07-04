@@ -31,3 +31,87 @@ body {
 
 /* Rest of the CSS from styles.css */
 /* ... */
+
+chat-form {
+    position: fixed;
+    bottom: 0;
+    left: 0;  /* ensures the form is left-aligned */
+    right: 0; /* ensures the form is right-aligned */
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    background-color: rgba(255, 255, 255, 0.5);  /* semi-transparent white */
+    backdrop-filter: blur(10px);  /* adds blur effect */
+    z-index: 9999;  /* Adjust this value as necessary to ensure the form stays on top */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);  /* semi-transparent white */
+    backdrop-filter: blur(10px);  /* adds blur effect */
+    padding: 10px 20px;
+    height: 30px;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 500px;
+    min-height: 300px;
+    height: auto;
+    border-radius: 5px;
+    background: #F9F8FF;
+    box-shadow: 0px 0px 30px rgba(111, 94, 147, 0.42);
+    border-radius: 20px;
+}
+
+.navbarimg{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
+}
+
+.overlay {
+    position: absolute;
+    margin-left: 28px;
+    margin-top: 52px;
+    width: 100px;
+    height: 155px;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 999999;
+  }
+
+  .overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 10px;
+}
+
+.overlay:hover::after {
+    opacity: 0.6;
+}

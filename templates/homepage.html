@@ -8,25 +8,27 @@
     
 </head>
 <body>
-    <h1>ChatLib</h1>
+    <div class="navbar">
+    
+        <img src="/static/images/navbar.png" alt="Navigation Bar Image" width="560" height="50" class="navbarimg">
+        
+    </div>
+    
+    <div class="chatbox">
     <div class="bookshelf">
-        <div class="book" id="chatLink">
-            <img src="{{ url_for('static', filename='images/tao_te_ching.jpg') }}">
-            <div class="title">Tao Te Ching.</div>
+        <img src="/static/images/home.png" alt="home Image" width="500" height="300" class="homeimg">
+        
+        <div class="overlay"></div>
+        
+    </div>
+        <div class="chat-form">
+            
         </div>
-        <div class="book">
-            <img src="{{ url_for('static', filename='images/aristotle.jpg') }}">
-            <div class="title">아리스토텔레스</div>
-        </div>
-        <div class="book">
-            <img src="{{ url_for('static', filename='images/jesus.jpg') }}">
-            <div class="title">예수</div>
-        </div>
-        <!-- And so on... -->
+    
     </div>
 
 <script>
-    $('#chatLink').click(function() {
+    $('.overlay').click(function() {
         window.location.href = '/chat'; 
     });
 </script>
