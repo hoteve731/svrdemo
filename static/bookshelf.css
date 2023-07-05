@@ -6,7 +6,8 @@ body {
     display: flex;
     overflow-x: auto;
     padding: 10px;
-}
+    
+} 
 
 .book {
     margin-right: 10px;
@@ -49,8 +50,7 @@ chat-form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);  /* semi-transparent white */
-    backdrop-filter: blur(10px);  /* adds blur effect */
+    background-color: white; 
     padding: 20px 20px;
     height: 30px;
     border-bottom: 2px solid #ddd;
@@ -80,6 +80,7 @@ chat-form {
 
 .bookshelf{
     justify-content: center;
+    position: relative;
 }
 
 .navbarimg{
@@ -96,14 +97,15 @@ chat-form {
 
 .overlay {
     position: absolute;
-    margin-left: -345px;
-    margin-top: 52px;
-    width: 100px;
-    height: 155px;
+    top: 11%; /* 변경: overlay div의 상단 위치를 .bookshelf div의 높이에 대한 비율로 설정 */
+    left: 7.1%; /* 변경: overlay div의 왼쪽 위치를 .bookshelf div의 너비에 대한 비율로 설정 */
+    width: 14.3%; /* 변경: overlay div의 너비를 .bookshelf div의 너비에 대한 비율로 설정 */
+    height: 26%;
     border-radius: 10px;
     background-color: transparent;
     cursor: pointer;
     z-index: 999999;
+    object-fit: contain;
   }
 
   .overlay::after {
@@ -117,8 +119,16 @@ chat-form {
     opacity: 0;
     transition: opacity 0.3s;
     border-radius: 10px;
+    
 }
 
 .overlay:hover::after {
     opacity: 0.6;
+}
+
+.homeimg{
+    height: auto; /* 또는 원하는 픽셀 단위나 백분율 */
+    width: 100%; /* 이미지의 너비를 감싸고 있는 요소의 너비에 맞춤 */
+    object-fit: contain; /* 이미지의 비율이 유지되도록 함 */
+
 }
